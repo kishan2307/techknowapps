@@ -51,18 +51,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
  */
 
 $route['user/login']['post'] = 'user/login';
-$route['user/friends/(:any)']['get'] = 'user/getFriendsList/$1';
+$route['user/friends']['post'] = 'user/getFriendsList/';
 
-$route['point/add/(:num)/(:any)']['post'] = 'user/addPoint/$1/$2';
-$route['point/history/(:any)']['get'] = 'user/getHistory/$1';
-$route['point/parent/(:num)/(:any)']['post'] = 'user/addParentPoint/$1/$2';
+$route['point/add']['post'] = 'user/addPoint';
+$route['point/history']['post'] = 'user/getHistory';
+$route['point/parent']['post'] = 'user/addParentPoint';
 
-$route['gift/cards']['get'] = 'user/getGiftCards';
-$route['gift/history/(:any)']['get'] = 'user/getGiftHistory/$1';
-$route['gift/redeem/(:any)']['post'] = 'user/addGiftRedeemRequest/$1';
-$route['gift/support/(:any)']['post'] = 'user/addSupportRequest/$1';
+$route['gift/cards']['post'] = 'user/getGiftCards';
+$route['gift/history']['post'] = 'user/getGiftHistory';
+$route['gift/redeem']['post'] = 'user/addGiftRedeemRequest';
+$route['gift/support']['post'] = 'user/addSupportRequest';
 
-$route['apps/more']['get'] = 'user/getMoreApps';
+$route['apps/more']['post'] = 'user/getMoreApps';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
